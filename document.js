@@ -122,18 +122,18 @@ const 画板 = 新建元素('canvas');
 const 上下文 = 画板.getContext('2d');
 
 const 从文档文本新建图形文件 = 文档文本 => {
-    const 原始数据 = new Blob([文档文本], { type: 'image/svg+xml' });
+    const 原始数据 = new Blob([文档文本], { type: 'image/svg+xml; charset=utf-8' });
     return URL.createObjectURL(原始数据);
 };
-const 是社交媒体 = /weibo|qq/i.test(navigator.userAgent);
-// alert(navigator.userAgent)
-const 下载文件 = (链接, 文件名, 元素 = 新建元素('a')) => {
-    if (!是社交媒体) {
-        元素.download = 文件名;
-    }
-    元素.href = 链接;
-    元素.click();
-};
+// const 是社交媒体 = /weibo|qq/i.test(navigator.userAgent);
+// // alert(navigator.userAgent)
+// const 下载文件 = (链接, 文件名, 元素 = 新建元素('a')) => {
+//     if (!是社交媒体) {
+//         元素.download = 文件名;
+//     }
+//     元素.href = 链接;
+//     元素.click();
+// };
 const 地址变图像元素 = (地址, 回调) => {
     const 图 = 新建图();
     添加事件监控(图, 'load', _ => 回调(图));
@@ -161,7 +161,7 @@ const 保存图像 = _ => {
         );
         画板.toBlob(元素数据 => {
             const 地址 = URL.createObjectURL(元素数据);
-            下载文件(地址, `重庆制霸.png`);
+            // 下载文件(地址, `重庆制霸.png`);
 
             输出图像.style.display = '';
             输出图像.querySelector('img').src = 地址;
