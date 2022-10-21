@@ -89,28 +89,28 @@ const 计分 = _ => {
 获取等级们并生效();
 计分();
 
-const 读文件成地址 = (原始数据, 回调) => {
-    const 读 = new FileReader();
-    读.onload = e => 回调(e.target.result);
-    读.readAsDataURL(原始数据);
-};
-const 获取字体数据地址 = (地址, 回调) => {
-    fetch(地址).then(r => r.blob()).then(原始数据 => 读文件成地址(原始数据, 回调));
-};
-const 获取字体样式 = (字体名, 回调) => {
-    获取字体数据地址(`${字体名}.woff?v=9`, 地址 => 回调(`@font-face {
-        font-family: ${字体名};
-        src: url(${地址});
-    };`));
-};
-获取字体样式('slice', 样式字串 => {
-    图形.querySelector('style').innerHTML = 样式字串;
-    const 样式元素 = 新建元素('style');
-    样式元素.innerHTML = 样式字串;
-    头元素.appendChild(样式元素);
-});
+// const 读文件成地址 = (原始数据, 回调) => {
+//     const 读 = new FileReader();
+//     读.onload = e => 回调(e.target.result);
+//     读.readAsDataURL(原始数据);
+// };
+// const 获取字体数据地址 = (地址, 回调) => {
+//     fetch(地址).then(r => r.blob()).then(原始数据 => 读文件成地址(原始数据, 回调));
+// };
+// const 获取字体样式 = (字体名, 回调) => {
+//     获取字体数据地址(`${字体名}.woff?v=9`, 地址 => 回调(`@font-face {
+//         font-family: ${字体名};
+//         src: url(${地址});
+//     };`));
+// };
+// 获取字体样式('slice', 样式字串 => {
+//     图形.querySelector('style').innerHTML = 样式字串;
+//     const 样式元素 = 新建元素('style');
+//     样式元素.innerHTML = 样式字串;
+//     头元素.appendChild(样式元素);
+// });
 
-const 宽 = 179.87036;
+const 宽 = 166.34326;
 const 高 = 150.04834;
 const 比 = 20;
 
@@ -147,7 +147,7 @@ const 保存图像 = _ => {
     // open(数据地址);
     // return ;
     地址变图像元素(数据地址, 图 => {
-        上下文.fillStyle = '#efb4b4';
+        上下文.fillStyle = 'rgb(255, 228, 80)';
         上下文.fillRect(
             0, 0,
             宽 * 比, 宽 * 比

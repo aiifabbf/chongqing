@@ -1,7 +1,8 @@
 html {
-    font: 18px/40px slice, sans-serif;
-    background-color: #efb4b4;
+    font: 18px/40px sans-serif;
+    background-color: rgb(255, 228, 80);
     color: #111;
+    font-weight: bold;
 }
 
 body {
@@ -42,7 +43,6 @@ a {
 
 #设置等级 h2 {
     margin: 0;
-    font-weight: normal;
     font-size: 26px;
     line-height: 40px;
     cursor: default;
