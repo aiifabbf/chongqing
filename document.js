@@ -141,7 +141,7 @@ const 地址变图像元素 = (地址, 回调) => {
 };
 
 const 保存图像 = _ => {
-    const 文档文本 = `<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${宽} ${高}" width="${宽}px" height="${高}px">${图形.innerHTML} <g>${qr.innerHTML}</g></svg>`;
+    const 文档文本 = `<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${宽} ${高}" width="${宽}px" height="${高}px">${图形.innerHTML} <g>${二维码.innerHTML}</g></svg>`;
     // const 文档文本 = `<?xml version="1.0" encoding="utf-8"?>` + 图形.outerHTML;
     const 数据地址 = 从文档文本新建图形文件(文档文本);
     // open(数据地址);
