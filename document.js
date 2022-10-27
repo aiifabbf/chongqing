@@ -46,7 +46,7 @@ const 最小间距 = 6;
     设置等级样式.display = 'block';
     const 设置等级元素方位 = 获取元素方位(设置等级);
 
-    let 左 = Math.round(省元素方位.left + 省元素方位.width / 2 - 设置等级元素方位.width / 2);
+    let 左 = Math.round(如何做爱元素.scrollLeft + 省元素方位.left + 省元素方位.width / 2 - 设置等级元素方位.width / 2);
     左 = Math.min(
         左,
         document.body.offsetWidth - 设置等级元素方位.width - 最小间距
@@ -56,7 +56,7 @@ const 最小间距 = 6;
         最小间距
     );
 
-    let 上 = Math.round(省元素方位.top + 省元素方位.height / 2 - 设置等级元素方位.height / 2);
+    let 上 = Math.round(如何做爱元素.scrollTop + 省元素方位.top + 省元素方位.height / 2 - 设置等级元素方位.height / 2);
     上 = Math.min(
         上,
         document.body.offsetHeight - 设置等级元素方位.height - 最小间距
