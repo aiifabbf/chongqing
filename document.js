@@ -159,14 +159,12 @@ const 保存图像 = _ => {
             0, (宽 - 高) * 比 / 2,
             宽 * 比, 高 * 比
         );
-        画板.toBlob(元素数据 => {
-            const 地址 = URL.createObjectURL(元素数据);
-            // 下载文件(地址, `重庆制霸.png`);
 
+        let 地址 = 画板.toDataURL("image/png");
+        输出图像.querySelector('img').src = 地址;
+        输出图像.querySelector('img').addEventListener("load", _ => {
             输出图像.style.display = '';
-            输出图像.querySelector('img').src = 地址;
-
-        }, 'image/png');
+        });
     });
 };
 
