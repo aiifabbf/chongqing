@@ -110,9 +110,9 @@ const 计分 = _ => {
 //     头元素.appendChild(样式元素);
 // });
 
-const 宽 = 166.34326;
-const 高 = 150.04834;
-const 比 = 20;
+const 宽 = 931.87;
+const 高 = 931.86999;
+const 比 = 3;
 
 const 画板 = 新建元素('canvas');
 
