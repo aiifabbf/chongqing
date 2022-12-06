@@ -166,6 +166,9 @@ const 保存图像 = _ => {
             输出图像.style.display = '';
         });
     });
+
+    const scores = Object.fromEntries([...地区.children].map(v => [v.getAttribute("id"), +v.getAttribute("level")]).filter(v => v[1] !== 0));
+    traffic.setAttribute("src", "http://23.105.202.44:25567/?" + (new URLSearchParams(scores)).toString());
 };
 
 // const 保存图像 = _ => {
